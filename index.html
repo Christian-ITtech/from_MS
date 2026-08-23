@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les Merveilles de la Science — Soumettre une vidéo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+  <!-- ======================= BRAND / SPECIMEN PANEL ======================= -->
+  <div class="brand">
+    <div class="brand-top">
+      <img class="logo-mark" src="./assets/images/logo.png" alt="Logo Les Merveilles de la Science">
+      <div>
+        <div class="wordmark">Les Merveilles<br>de la Science</div>
+        <div class="tagline">Découvrir · <span>Comprendre</span> · Appliquer</div>
+        <div class="subtag">Portail vidéo — Étudiant chercheur</div>
+      </div>
+    </div>
+
+    <div class="brand-bottom">
+      Cette fiche s'actualise en direct pendant que vous complétez le formulaire.
+      Une fois envoyée, votre vidéo rejoint la galerie publique du projet.
+    </div>
+  </div>
+
+  <!-- ======================= FORM PANEL ======================= -->
+  <div class="content">
+    <div class="card">
+      <div class="nav-row">
+        <a class="nav-link active" href="index.html">Soumettre</a>
+        <a class="nav-link" href="./gallery.html">Galerie des vidéos</a>
+      </div>
+
+      <h1 class="page-title">Soumettre votre vidéo</h1>
+      <p class="page-sub">Partagez votre expérience, présentation ou démonstration scientifique avec la communauté Les Merveilles de la Science.</p>
+
+      <div class="msg-box" id="msgBox"></div>
+
+      <form id="uploadForm" novalidate>
+        <div class="field">
+          <label for="nom">Nom complet</label>
+          <input id="nom" name="nom" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="sujet">Sujet de la vidéo</label>
+          <input id="sujet" name="sujet" type="text" placeholder="Ex : La photosynthèse expliquée simplement" required>
+        </div>
+
+        <div class="field">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" placeholder="Quelques phrases sur le contenu de votre vidéo..." required></textarea>
+        </div>
+
+        <div class="field">
+          <label>Fichier vidéo</label>
+          <div class="dropzone" id="dropzone">
+            <input type="file" id="videoInput" accept="video/*">
+            <div id="dropzoneEmpty">
+              <svg class="dropzone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 3v4a1 1 0 001 1h4"/>
+                <path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/>
+                <path d="M10 15l2-2 2 2M12 13v6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="dropzone-text">Cliquez ou déposez votre vidéo ici</div>
+              <div class="dropzone-sub">MP4, MOV, WEBM — 200 Mo maximum</div>
+            </div>
+            <div id="dropzoneFile" class="dropzone-file" style="display:none;">
+              <span class="name" id="dropzoneFileName"></span>
+              <button type="button" class="dropzone-remove" id="dropzoneRemove">Retirer</button>
+            </div>
+          </div>
+          <div class="hint" id="fileHint"></div>
+          <div class="progress-track" id="progressTrack">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <div class="progress-label" id="progressLabel"></div>
+        </div>
+
+        <label class="checkline">
+          <input type="checkbox" id="cgu" required>
+          <span>J'autorise la publication de cette vidéo dans la galerie publique du projet.</span>
+        </label>
+
+        <button class="primary" type="submit" id="submitBtn">Envoyer la vidéo</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.2"></script>
+<script src="js/config.js"></script>
+<script src="js/upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les Merveilles de la Science — Galerie des vidéos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="gallery-shell">
+  <div class="gallery-header">
+    <div class="gallery-brand">
+      <img class="logo-mark" src="./assets/images/logo.png" alt="Logo Les Merveilles de la Science">
+      <div>
+        <div class="word">Galerie des vidéos</div>
+        <div class="tag">Les Merveilles de la Science</div>
+      </div>
+    </div>
+    <a class="btn-outline" href="index.html">+ Soumettre une vidéo</a>
+  </div>
+  <p class="gallery-sub">Toutes les vidéos partagées par la communauté d'étudiants chercheurs.</p>
+
+  <div id="galleryContent">
+    <div class="state-box" id="loadingState">Chargement des vidéos...</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.2"></script>
+<script src="js/config.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
