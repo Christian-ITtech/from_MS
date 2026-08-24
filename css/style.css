@@ -107,88 +107,29 @@ a{color:inherit;}
   color:#AEC2B5;
 }
 
-/* ---------- specimen / submission card (signature element) ---------- */
-.specimen{
-  margin-top:34px;
-  background:linear-gradient(160deg, rgba(20,43,36,0.9), rgba(11,23,18,0.9));
-  border:1px solid rgba(63,168,174,0.35);
-  border-radius:var(--radius);
-  padding:20px 20px 18px;
-  position:relative;
-}
-.specimen-label{
-  font-family:'IBM Plex Mono', monospace;
-  font-size:10px;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  color:var(--teal-bright);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.specimen-stamp{
-  font-family:'IBM Plex Mono', monospace;
-  font-size:9.5px;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  padding:3px 8px;
-  border-radius:3px;
-  border:1px solid rgba(178,58,58,0.5);
-  color:#E2A2A2;
-}
-.specimen-stamp.saved{
-  border-color:rgba(95,162,92,0.6);
-  color:#B7DDB2;
-}
-.specimen-title{
-  font-family:'Newsreader', serif;
-  font-size:19px;
-  font-weight:500;
-  margin-top:12px;
-  color:#F4F8F5;
-  min-height:24px;
-}
-.specimen-sujet{
-  font-size:12.5px;
-  color:#AEC2B5;
-  margin-top:3px;
-  min-height:16px;
-}
-.specimen-divider{
-  margin:14px 0;
-  border:none;
-  border-top:1px dashed rgba(255,255,255,0.14);
-}
-.specimen-row{
-  display:flex; justify-content:space-between; align-items:center;
-  font-family:'IBM Plex Mono', monospace;
-  font-size:10.5px;
-  color:#8CA097;
-}
-
-.brand-bottom{
-  font-size: 0.7rem;
-  color: white;
-  line-height:1.6;
-  max-width:340px;
-}
-
 /* ---------- right panel: form ---------- */
 .content{
-  flex:1;
-  display:flex;
-  justify-content:center;
-  padding:56px 40px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 56px 40px;
 }
-.card{width:100%; max-width:520px;}
+.card{
+  width:100%;
+  max-width:520px;}
 
-.nav-row{
-  display:flex; gap:24px; margin-bottom:30px;
+.nav-row {
+  display:flex;
+  gap:24px;
+  margin-bottom:30px;
   border-bottom:1px solid var(--line);
 }
 .nav-link{
-  font-size:13.5px; font-weight:500; padding:10px 2px 12px;
-  color:var(--muted); text-decoration:none;
+  font-size:13.5px;
+  font-weight:500;
+  padding:10px 2px 12px;
+  color:var(--muted);
+  text-decoration:none;
   border-bottom:2px solid transparent;
   transform:translateY(1px);
 }
@@ -375,8 +316,9 @@ button.primary:disabled{opacity:0.55; cursor:not-allowed;}
     flex-direction:column;
   }
   .brand {
-    flex:none; min-height:auto;
-    padding:34px 26px;
+    flex:none;
+    min-height:auto;
+    padding:34px 34px;
   }
   .content{
     padding:36px 22px;
